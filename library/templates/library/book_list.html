@@ -1,8 +1,30 @@
-<a href="{% url 'book_new' %}">New book</a>
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Books list</title>
+        <link rel="icon" href="{% static 'favicon.ico' %}">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
 
-{% for book in books %}
-    {{ book.title }}
-    {{ book.author }}
-    <h1><a href="{% url 'book_delete' pk=book.pk %}">Delete</a></h1>
-    <br>
-{% endfor %}
+    <body>
+        <div id='go_to_new'>
+            <a href="{% url 'book_new' %}">New book</a>
+        </div>
+        <div id='books_list'>
+            {% for book in books %}
+                <div class='book'>
+                    <div class='col-sm-9'>
+                        <h3>{{ book.title }}</h3>
+                        <h6><i>{{ book.author }}</i></h6>
+                    </div>
+                    <div class='col-sm-3'>
+                        <h6><a href="{% url 'book_delete' pk=book.pk %}">delete</a></h6>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
