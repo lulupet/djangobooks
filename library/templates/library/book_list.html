@@ -3,4 +3,6 @@
 {% for book in books %}
     {{ book.title }}
     {{ book.author }}
+    <h1><a href="{% url 'book_delete' pk=book.pk %}">Delete</a></h1>
+    <br>
 {% endfor %}
