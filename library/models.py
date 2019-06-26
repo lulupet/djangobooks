@@ -4,8 +4,8 @@ from django.utils import timezone
 
 
 class Book(models.Model):
-    author = models.TextField()
-    title = models.TextField()
+    author = models.CharField(max_length=70)
+    title = models.CharField(max_length=70)
 
     def create(self):
         self.save()

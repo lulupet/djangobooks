@@ -13,7 +13,7 @@ def book_new(request):
         book.save()
         return redirect('book_list')
     else:
-        form = BookForm()
+        form = BookForm(label_suffix='')
     return render(request, 'library/book_new.html', {'form': form})
 
 def book_delete(request, pk):
