@@ -1,0 +1,41 @@
+#new_div {
+    margin: auto;
+    width: 400px;
+    margin-top: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    padding: 100px;
+}
+
+p {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.8);
+}
+
+button {
+    margin: auto !important;
+    display: block !important;
+}
+
+#id_title, #id_author {
+    border-radius: 5px;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book {
+    width: 800px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 1);
+    border-radius: 5px;
+}
