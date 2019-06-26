@@ -1,0 +1,6 @@
+<a href="{% url 'book_new' %}">New book</a>
+
+{% for book in books %}
+    {{ book.title }}
+    {{ book.author }}
+{% endfor %}
